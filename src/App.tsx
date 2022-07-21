@@ -4,7 +4,6 @@ import kiwi from './assets/static/kiwi.svg'
 
 const App = () => {
   const [counter, setCounter] = useState<number>(0)
-  const ssss="jj"
   return (
     <div>
       <img width={200} src={react} alt="react" />
