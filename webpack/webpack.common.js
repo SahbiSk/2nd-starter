@@ -1,12 +1,14 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const DotenvWebpackPlugin = require('dotenv-webpack')
-const CopyPlugin = require('copy-webpack-plugin')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
+    plugins: [new TsconfigPathsPlugin()],
+    alias: [...require('./webpack.alias')],
   },
 
   module: {
@@ -43,9 +45,6 @@ module.exports = {
       template: path.resolve(__dirname, '..', './src/index.html'),
     }),
     new DotenvWebpackPlugin(),
-    new CopyPlugin({
-      patterns: [{ from: 'source', to: 'dest' }],
-    }),
   ],
   stats: 'errors-only',
 }
