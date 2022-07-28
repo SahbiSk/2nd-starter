@@ -2,7 +2,7 @@ import React from 'react'
 import Characters from 'modules/breakingBad/characters.components'
 import Layout from 'modules/layout/layout.component'
 
-const BBCharacters = () => {
+const BBCharactersPage = () => {
   return (
     <Layout>
       <Characters />
@@ -10,4 +10,4 @@ const BBCharacters = () => {
   )
 }
 
-export default React.memo(BBCharacters)
+export const BBCharacters = React.memo(BBCharactersPage)

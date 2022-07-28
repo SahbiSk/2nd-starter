@@ -2,7 +2,7 @@ import { Typography } from '@mui/material'
 import React from 'react'
 import Layout from '../modules/layout/layout.component'
 
-const Home = () => {
+const HomePage = () => {
   return (
     <Layout>
       <Typography>Home</Typography>
@@ -10,4 +10,4 @@ const Home = () => {
   )
 }
 
-export default React.memo(Home)
+export const Home = React.memo(HomePage)

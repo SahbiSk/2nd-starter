@@ -8,7 +8,7 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
     plugins: [new TsconfigPathsPlugin()],
-    alias: [...require('./webpack.alias')],
+    alias: { ...require('./webpack.alias') },
   },
 
   module: {

@@ -1,3 +1,4 @@
+import { BBCharacters, Home } from 'pages'
 import React from 'react'
 import {
   BrowserRouter as Router,
@@ -5,14 +6,12 @@ import {
   Route,
   Routes,
 } from 'react-router-dom'
-import BbCharacters from '../pages/bb-characters'
-import Home from '../pages/home'
 
 const MainRoutes = () => {
   const routesWithPages = [
     {
       path: '/characters',
-      element: <BbCharacters />,
+      element: <BBCharacters />,
     },
     {
       path: '/',
