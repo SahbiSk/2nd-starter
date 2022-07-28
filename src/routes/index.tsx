@@ -1,5 +1,5 @@
-import { BBCharacters, Home } from 'pages'
 import React from 'react'
+import { BBCharacters, Character, Home } from 'pages'
 import {
   BrowserRouter as Router,
   Navigate,
@@ -12,6 +12,10 @@ const MainRoutes = () => {
     {
       path: '/characters',
       element: <BBCharacters />,
+    },
+    {
+      path: '/character/:id',
+      element: <Character />,
     },
     {
       path: '/',
